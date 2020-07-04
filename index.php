@@ -11,5 +11,11 @@
 
 	$produtoDao = new \App\Model\ProdutoDao();
 	$produtoDao-> create($produto);
+	$produtoDao-> read();
+	foreach ($produtoDao->read() as $produto ):
+		echo $produto['NOME']."<br>".
+		$produto['DESCRICAO']."<br>".
+		$produto['VALOR']."<hr>";
+	endforeach;
 ?>
 
