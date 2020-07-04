@@ -1,29 +1,42 @@
 <?php
 
-class Produto{
-	private $nome, $descricao, $valor;
+namespace App\Model;
 
-	prublic function getNome(){
+class Produto {
+	private $id;
+	private $nome;
+	private $descricao;
+	private $valor;
+
+	public function getId(){
+		return $this->id;
+	}
+
+	public function setId($id){
+		$this->id = $id;
+	}
+
+	public function getNome(){
 		return $this->nome;
 	}
 
-	prublic function setNome($nome){
+	public function setNome($nome){
 		$this->nome = $nome;
 	}
 
-	prublic function getDescricao(){
+	public function getDescricao(){
 		return $this->descricao;
 	}
 
-	prublic function setDescricao($descricao){
+	public function setDescricao($descricao){
 		$this->descricao = $descricao;
 	}
 
-	prublic function getValor(){
+	public function getValor(){
 		return $this->valor;
 	}
 
-	prublic function setValor($valor){
+	public function setValor($valor){
 		$this->valor = $valor;
 	}
 
